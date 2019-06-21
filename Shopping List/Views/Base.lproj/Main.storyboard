@@ -9,16 +9,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Shopping List List Table View Controller-->
         <scene sceneID="ZFY-Rp-daS">
             <objects>
-                <tableViewController id="Rm1-XY-o7u" sceneMemberID="viewController">
+                <tableViewController id="Rm1-XY-o7u" customClass="ShoppingListListTableViewController" customModule="Shopping_List" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vK5-d9-2Zt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="92" id="WdV-L5-BCe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="92" id="WdV-L5-BCe" customClass="ShoppingListTableViewCell" customModule="Shopping_List" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="92"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WdV-L5-BCe" id="1gx-wd-mXD">
@@ -29,17 +29,22 @@
                                             <rect key="frame" x="20" y="11" width="374" height="70"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odB-rL-Wi1">
-                                                    <rect key="frame" x="0.0" y="25" width="296" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="25" width="322" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RMr-sh-YnT">
-                                                    <rect key="frame" x="304" y="0.0" width="70" height="70"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dY2-Ub-Yi0">
+                                                    <rect key="frame" x="330" y="13" width="44" height="44"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="RMr-sh-YnT" secondAttribute="height" id="i9S-4G-Mf9"/>
+                                                        <constraint firstAttribute="height" constant="44" id="VD3-c9-QTJ"/>
+                                                        <constraint firstAttribute="width" secondItem="dY2-Ub-Yi0" secondAttribute="height" multiplier="1:1" id="c6w-20-3dY"/>
                                                     </constraints>
-                                                </imageView>
+                                                    <state key="normal" image="incomplete"/>
+                                                    <connections>
+                                                        <action selector="completeButtonTapped:" destination="WdV-L5-BCe" eventType="touchUpInside" id="MEd-2C-Zfu"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -50,6 +55,10 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="wEd-W1-Hkd" secondAttribute="trailing" id="Uwg-21-Rgt"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="completeButton" destination="dY2-Ub-Yi0" id="Pj9-FB-3ra"/>
+                                    <outlet property="nameLabel" destination="odB-rL-Wi1" id="p3p-G0-hPe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -58,7 +67,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Vjm-3n-8jL">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mj6-km-SrG"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mj6-km-SrG">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="Rm1-XY-o7u" id="WaB-s4-FTt"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ntd-st-zZ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,4 +95,7 @@
             <point key="canvasLocation" x="-1278" y="265"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="incomplete" width="256" height="256"/>
+    </resources>
 </document>

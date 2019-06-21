@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8508DF2922BD2FBC00977E7F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8508DF2822BD2FBC00977E7F /* CoreDataStack.swift */; };
 		8508DF2B22BD305100977E7F /* Item+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8508DF2A22BD305100977E7F /* Item+Convenience.swift */; };
+		8508DF2D22BD320F00977E7F /* ItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8508DF2C22BD320F00977E7F /* ItemController.swift */; };
+		8508DF2F22BD358C00977E7F /* ShoppingListListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8508DF2E22BD358C00977E7F /* ShoppingListListTableViewController.swift */; };
+		8508DF3122BD36AC00977E7F /* ShoppingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8508DF3022BD36AC00977E7F /* ShoppingListTableViewCell.swift */; };
 		8548FE1C22BD2CAF00554E4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548FE1B22BD2CAF00554E4D /* AppDelegate.swift */; };
 		8548FE2122BD2CAF00554E4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8548FE1F22BD2CAF00554E4D /* Main.storyboard */; };
 		8548FE2422BD2CAF00554E4D /* Shopping_List.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8548FE2222BD2CAF00554E4D /* Shopping_List.xcdatamodeld */; };
@@ -19,6 +22,9 @@
 /* Begin PBXFileReference section */
 		8508DF2822BD2FBC00977E7F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		8508DF2A22BD305100977E7F /* Item+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+Convenience.swift"; sourceTree = "<group>"; };
+		8508DF2C22BD320F00977E7F /* ItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemController.swift; sourceTree = "<group>"; };
+		8508DF2E22BD358C00977E7F /* ShoppingListListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListListTableViewController.swift; sourceTree = "<group>"; };
+		8508DF3022BD36AC00977E7F /* ShoppingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListTableViewCell.swift; sourceTree = "<group>"; };
 		8548FE1822BD2CAF00554E4D /* Shopping List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopping List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8548FE1B22BD2CAF00554E4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8548FE2022BD2CAF00554E4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +86,8 @@
 		8508DF2622BD2D7A00977E7F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8508DF2E22BD358C00977E7F /* ShoppingListListTableViewController.swift */,
+				8508DF3022BD36AC00977E7F /* ShoppingListTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -87,6 +95,7 @@
 		8508DF2722BD2D8E00977E7F /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8508DF2C22BD320F00977E7F /* ItemController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -190,8 +199,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8508DF2B22BD305100977E7F /* Item+Convenience.swift in Sources */,
+				8508DF2F22BD358C00977E7F /* ShoppingListListTableViewController.swift in Sources */,
 				8508DF2922BD2FBC00977E7F /* CoreDataStack.swift in Sources */,
+				8508DF3122BD36AC00977E7F /* ShoppingListTableViewCell.swift in Sources */,
 				8548FE1C22BD2CAF00554E4D /* AppDelegate.swift in Sources */,
+				8508DF2D22BD320F00977E7F /* ItemController.swift in Sources */,
 				8548FE2422BD2CAF00554E4D /* Shopping_List.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
